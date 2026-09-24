@@ -4,6 +4,10 @@ Postura is a smart posture monitoring device designed to help students and desk-
 
 This project was developed for **UCSD ECE 140B** as a product-focused embedded systems project. My role focused on hardware integration, sensor testing, vibration feedback, prototype design, and customer validation.
 
+## Demo
+
+[Watch the Postura demo](https://youtu.be/FTXZTZuFShc)
+
 
 ## Project Poster
 
