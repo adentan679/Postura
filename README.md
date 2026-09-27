@@ -121,6 +121,71 @@ The dashboard allows users to view live posture data, calibrate their posture ba
 
 ---
 
+## Sensor Readings and Posture Detection
+
+The sensor dashboard visualizes the VL53L5CX’s 8×8 sensing grid
+alongside the calibrated upright baseline. Changes across the
+sensor zones help the system distinguish posture states.
+
+### Good Posture
+
+![Sensor dashboard showing good posture](media/postura_grid1.png)
+
+*Sensor readings during a position classified as good posture,
+shown alongside the calibration baseline.*
+
+### Severe Slouch
+
+![Sensor dashboard showing severe slouch](media/postura_grid3.png)
+
+*Changes across the sensing grid produce a severe-slouch
+classification, triggering vibration feedback.*
+
+---
+
+## Website and Session Tracking
+
+The Postura website displays posture statistics during a sitting
+session, including time spent in different posture states. These
+statistics contribute to a posture score and session summary,
+helping users reflect on their sitting habits.
+
+The website also includes break reminders that encourage users
+to move regularly during long sitting sessions, educational
+information about prolonged sitting, and suggested ergonomic
+stretches.
+
+### Work Session
+
+![Postura work session page](media/website1.png)
+
+*Calibration controls, a session timer, live posture feedback,
+and posture tips.*
+
+### Posture Dashboard
+
+![Postura statistics dashboard](media/website2.png)
+
+*An overview of posture distribution, a posture score,
+trend visualization, and recent alerts.*
+
+### Profile and Settings
+
+![Postura profile and settings page](media/website3.png)
+
+*Prototype interface for account information, device status,
+alert preferences, and posture goals.*
+
+### Session Summary
+
+![Postura session summary](media/website4.png)
+
+*A session score, posture breakdown, session details,
+and suggested stretches.*
+
+---
+
+
 ## Customer Discovery
 
 We conducted customer interviews with students and desk-heavy professionals to validate the problem. Interviewees reported poor posture during long sitting sessions and often only noticed the issue after pain, soreness, or fatigue started.
