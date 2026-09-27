@@ -28,6 +28,7 @@ The device is designed to be passive and chair-mounted, meaning users do not nee
 
 ![Postura first prototype](media/first_prototype.JPG)
 
+*Early Postura prototype idea. Initial design relating to lower lumbar support.*
 
 
 ## Key Features
@@ -80,13 +81,39 @@ Live Dashboard / Session Tracking
 
 ## Software Components
 
-### ESP32 Firmware
+### ESP32 Firmware — `esp32/`
 
-The ESP32 firmware reads the 8x8 ToF sensor, calibrates the user’s upright posture, classifies posture states, and triggers vibration feedback. The firmware also publishes posture data over MQTT so the backend can display live sensor information.
+PlatformIO firmware that reads the VL53L5CX sensor, calibrates an
+upright posture baseline, classifies posture, and controls the
+vibration motors. It publishes sensor and posture data over MQTT
+and receives calibration commands.
 
-### Backend Server
+### Main Web Application — `website/`
 
-The backend receives posture data from the ESP32 using MQTT. It also supports live dashboard updates, posture session tracking, and data logging.
+The main FastAPI application combines the posture dashboard with
+user registration/login, MySQL-backed accounts, work-session
+tracking, and posture data logging. Its interface uses HTML
+templates, CSS, and JavaScript.
+
+### Standalone Sensor Dashboard — `python/`
+
+A separate FastAPI application for viewing live sensor data,
+triggering calibration, and saving labeled posture samples to CSV.
+It provides a focused interface for sensor testing and data collection.
+
+### Why Are There Two Python Applications?
+
+Both `website/` and `python/` include MQTT communication,
+WebSocket updates, calibration controls, and CSV logging, so some
+functionality overlaps.
+
+They are separate applications, not a frontend/backend pair:
+`website/` provides the fuller user-facing experience, while
+`python/` provides the standalone sensor dashboard. The website
+does not require `python/server.py` to run.
+
+Both applications default to port 8000, so run one at a time
+unless you configure different ports.
 
 ### Web Dashboard
 
