@@ -24,6 +24,12 @@ The device is designed to be passive and chair-mounted, meaning users do not nee
 
 ---
 
+## Prototype 
+
+![Postura first prototype](media/first_prototype.JPG)
+
+
+
 ## Key Features
 
 - Real-time posture detection using an 8x8 ToF distance sensor
