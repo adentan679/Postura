@@ -167,16 +167,7 @@ Live readings require an ESP32 publishing to the same MQTT broker and topic pref
 
 We interviewed students and desk-heavy professionals to understand their sitting habits, existing solutions, and preferences.
 
-Key findings included:
-
-- Participants often lost posture awareness while focused on studying, work, or deadlines.
-- Discomfort, soreness, or fatigue frequently prompted them to notice their posture.
-- Existing workarounds included pillows, stretching, chair adjustments, and footrests.
-- Participants favored passive, chair-mounted solutions over wearables.
-- Quiet vibration feedback appealed to users in shared spaces.
-- A healthcare professional suggested a pause feature to avoid alerts during normal movement.
-
-These qualitative findings informed the form factor, feedback approach, and proposed improvements.
+[Read the customer discovery findings](docs/customer-discovery.md)
 
 ## Business Model
 
